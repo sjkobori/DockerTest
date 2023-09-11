@@ -1,7 +1,5 @@
-# Basic nginx dockerfile starting with Ubuntu 20.04
 FROM ubuntu:20.04
-RUN echo "deb http://security.ubuntu.com/ubuntu focal-security main" | sudo tee /etc/apt/sources.list.d/focal-security.list && \
-sudo apt-get update && \
+RUN sudo apt-get update && \
 sudo apt install libgconf-2-4 libgl1-mesa-glx libgtk-3-dev libsoup2.4-1 libarchive13 libpng16-16 libgconf-2-4 lib32stdc++6 libcanberra-gtk-module libssl1.1 && \
 curl --output installer https://download.unity3d.com/download_unity/b4360d7cdac4/LinuxEditorInstaller/Unity-2021.3.30f1.tar.xz && \
 tar -vxf installer && \
